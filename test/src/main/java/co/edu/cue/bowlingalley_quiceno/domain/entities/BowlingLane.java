@@ -12,12 +12,10 @@ import java.util.List;
 @Entity
 public class BowlingLane {
     @Id
-    @Column(name = "id_Bowling_Lane")
-    private String idBowlingLane;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_bowling_lane")
+    private int idBowlingLane;
     private String name;
     @Enumerated(EnumType.STRING)
     private LaneStatus status;
-    @OneToMany
-    @JoinColumn(name = "id_lane_reservation")
-    private List<BowlingLaneReservation> reservationHistory;
 }

@@ -11,8 +11,7 @@ public class BowlingLaneMapper {
         return new BowlingLaneDto(
                 source.getIdBowlingLane(),
                 source.getName(),
-                source.getStatus(),
-                source.getReservationHistory()
+                source.getStatus()
         );
     }
 
@@ -20,8 +19,7 @@ public class BowlingLaneMapper {
         return new BowlingLane(
                 source.idBowlingLane(),
                 source.name(),
-                source.status(),
-                source.reservationHistory()
+                source.status()
         );
     }
 

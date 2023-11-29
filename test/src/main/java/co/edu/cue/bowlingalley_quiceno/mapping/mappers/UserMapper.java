@@ -7,16 +7,13 @@ import java.util.List;
 
 public class UserMapper {
     public static UserDto mapFrom(User source){
-        return new UserDto(source.getUserId(), source.getName(), source.getPhoneNumber(), source.getEmail(),
-                source.getPassword(), source.getIsUserAffiliate());
+        return new UserDto(source.getUserId(), source.getName(), source.getEmail(), source.getIsUserAffiliate());
     }
 
     public static User mapFrom (UserDto source){
         return new User(source.userId(),
                 source.name(),
-                source.phoneNumber(),
                 source.email(),
-                source.password(),
                 source.isUserAffiliate());
     }
 

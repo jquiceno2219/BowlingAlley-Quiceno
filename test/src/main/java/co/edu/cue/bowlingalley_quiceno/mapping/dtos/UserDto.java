@@ -4,10 +4,8 @@ import co.edu.cue.bowlingalley_quiceno.domain.enums.IsUserAffiliate;
 import lombok.Builder;
 
 @Builder
-public record UserDto(String userId,
+public record UserDto(int userId,
         String name,
-        Long phoneNumber,
         String email,
-        String password,
         IsUserAffiliate isUserAffiliate) {
 }

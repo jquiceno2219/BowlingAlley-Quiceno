@@ -15,7 +15,7 @@ public class BowlingLaneReservation {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id_lane_reservation")
-    private String idBowlingLaneReservation;
+    private int idBowlingLaneReservation;
     @Column(name="reservation_date")
     private LocalDate date;
     @Column(name="reservation_start_hour")
@@ -23,12 +23,13 @@ public class BowlingLaneReservation {
     @Column(name="reservation_end_hour")
     private LocalTime endHour;
     @Column(name="reservation_quantity")
-    private Long personQuantity;
+    private int personQuantity;
     @ManyToOne
-    @JoinColumn(name="id_user")
+    @JoinColumn(name = "user_id")
     private User user;
     @Column(name="reservation_price")
-    private float price;
+    private Double price;
     @ManyToOne
-    private BowlingLane BowlingLane;
+    @JoinColumn(name="id_bowling_lane")
+    private BowlingLane bowlingLane;
 }

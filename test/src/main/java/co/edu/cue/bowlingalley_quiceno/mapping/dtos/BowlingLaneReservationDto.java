@@ -9,12 +9,12 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 @Builder
-public record BowlingLaneReservationDto(String idBowlingLaneReservation,
+public record BowlingLaneReservationDto(int idBowlingLaneReservation,
                                         LocalDate date,
                                         LocalTime startHour,
                                         LocalTime endHour,
-                                        Long personQuantity,
+                                        int personQuantity,
                                         User user,
-                                        float price,
+                                        Double price,
                                         BowlingLane BowlingLane) {
 }
